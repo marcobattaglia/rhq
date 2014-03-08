@@ -14,10 +14,10 @@
           <parent-resource-type name="JBossAS7 Standalone Server" plugin="JBossAS7"/>
           <parent-resource-type name="Managed Server" plugin="JBossAS7"/>
     </runs-inside>
-  <service name="OpenShift"
-      class="OpenshiftComponent"
-      discovery="OpenshiftDiscovery"
-      description="OpenShift specific information"
+  <service name="XMonitor"
+      class="XMonitorComponent"
+      discovery="XMonitorDiscovery"
+      description="XMonitor Plugin"
       >
     
      <plugin-configuration>
@@ -37,7 +37,7 @@
                   default="pippo"
                   />
       <c:simple-property
-                  name="host"
+                  name="hostname"
                   required="true"
                   description="The host name to connect by JMX remoting" 
                   default="127.0.0.1"

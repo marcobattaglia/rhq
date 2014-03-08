@@ -1,10 +1,13 @@
 package org.rhq.modules.plugins.xmonitor;
 import java.io.IOException;
 import java.util.LinkedList;
+import java.util.List;
 
 import javax.management.ObjectName;
 
 import org.apache.log4j.Logger;
+import org.mc4j.ems.connection.EmsConnection;
+import org.mc4j.ems.connection.bean.EmsBean;
 import org.rhq.core.domain.configuration.Configuration;
 import org.rhq.modules.plugins.xmonitor.util.JMXServerFacade;
 
@@ -14,6 +17,12 @@ public class ManagerConfig {
 	private static Logger log = Logger.getLogger(ManagerConfig.class);
 	
 	//method
+	public List<EmsBean> discover(EmsConnection emsConn){
+		return emsConn.queryBeans(this.discoveryFilter);
+		
+	}
+	
+	
 	public LinkedList<ObjectName> discover(){
 		log.info("I'm discovering with this filter " + this.discoveryFilter);
 		LinkedList<ObjectName> discoveredNow = new LinkedList<ObjectName>();

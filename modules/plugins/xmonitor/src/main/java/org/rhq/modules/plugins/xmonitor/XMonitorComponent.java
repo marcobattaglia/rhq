@@ -30,7 +30,7 @@ import org.rhq.modules.plugins.jbossas7.json.ComplexResult;
 import org.rhq.modules.plugins.jbossas7.json.ReadAttribute;
 
 @SuppressWarnings("unused")
-public class OpenshiftComponent extends StandaloneASComponent<BaseComponent<?>> implements MeasurementFacet
+public class XMonitorComponent extends StandaloneASComponent<BaseComponent<?>> implements MeasurementFacet
 {
     private final Log log = LogFactory.getLog(this.getClass());
 

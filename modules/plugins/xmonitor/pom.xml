@@ -166,13 +166,19 @@
                 <version>${project.version}</version>
                 <scope>provided</scope>
             </dependency>
+            
           <dependency>
             <groupId>org.rhq</groupId>
             <artifactId>rhq-jboss-as-7-plugin</artifactId>
             <version>${project.version}</version>
-            <scope>provided</scope>
+           
           </dependency>
-          <dependency>
+           <dependency>
+      <groupId>org.rhq</groupId>
+      <artifactId>rhq-jmx-plugin</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+          <!-- dependency>
           <groupId>org.jboss</groupId>
 			<artifactId>jboss-remote-naming</artifactId>
 			<version>1.0.3.Final-redhat-1</version>
@@ -191,8 +197,8 @@
 			<groupId>org.jboss.remotingjmx</groupId>
     <artifactId>remoting-jmx</artifactId>
     <version>1.0.3.Final</version>
-		</dependency>
-            <!-- TODO add your dependencies here -->
+		</dependency-->
+           
 
         </dependencies>
 </project>
